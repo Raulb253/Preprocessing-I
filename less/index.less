@@ -7,11 +7,20 @@
 @font:'Roboto', sans-serif;
 @blueBackground:#e6e6ff;
 @boldText:600;
-
+@biggerFont:1.8rem;
 .historyLayout(){
 	display: flex;
 	flex-direction: row;
 	padding:0% 0% 0% 3%;
+}
+
+@viewport{
+	zoom:1.0;
+	width:extend-to-zoom;
+}
+@-ms-viewport{
+	width:extend-to-zoom;
+	zoom:1.0;
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -28,7 +37,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	// margin: 0;
 	// padding: 0;
-	// border: 0; commented out for now
+	// border: 0; 
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -61,7 +70,7 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
 	box-sizing: border-box;
-	border: 1px solid black;
+	// border: 1px solid black; don't need anymore
 }
 
 html, body {
@@ -69,16 +78,19 @@ html, body {
 	font-family: @font;
 }
 header{
+	@media(max-width:500px){
+		width:100%;
+	}
 	display: flex;
 	flex-direction: column;
-	background-color: @blueBackground;
-	
+	// align-content: center;
 	img{
 		width:50%;
 	}
 	nav{
 	display: flex;
 	justify-content: flex-end;
+	margin-bottom: 2%;
 	
 	a{
 		color:black;
@@ -87,23 +99,116 @@ header{
 		padding:0 .5%
 	}
 }
+	
+	
+}
+
+.mainHead{
+	background-color: @blueBackground;
 	h1{
 		display: flex;
 		// justify-content: center;
 		// font-weight: @boldText;
-		font-size: 2.2rem;
-		padding: 0% 2%;
+		font-size: 2.3rem;
+		padding: 0% 3%;
 }
 	p{
-		padding: 0 2%;
+		padding: 0 3%;
 	}
 }
-
-
+.fa {
+	@media(max-width:500px){
+		width:5%;
+	}
+	padding: 1%;
+	font-size: 2rem;
+	width: 3.5%;
+	text-align: center;
+	text-decoration: none;
+	margin: 0% 8% 1% 8%;
+  }
+  .fa:hover {
+	  opacity: 0.7;
+  }
+  .fa-linkedin {
+	background: #007bb5;
+	color: white;
+  }
 .workHistory{
 	display: flex;
 	flex-direction: column;
+	margin-top: 3%;
+	h3{
+		font-size: @biggerFont;
+		border-bottom:1px dashed black;
+		padding-bottom: 2%;
+	}
+	.companyList {
+		div{	
+			.historyLayout();
+		}
+	}
 }
-.companyList div{	
-	.historyLayout()
+.compTi{
+	background-color:@blueBackground ;
+	p{
+		padding-right: 14%;
+	}
 }
+.amzPri{
+	p{
+		padding-right: 15%;
+	}
+}
+.offDep{
+	background-color:@blueBackground ;
+	p{
+		padding-right: 12.5%;
+	}
+}
+
+  .firstSection{
+	  display:flex;
+	  .aboutMe{
+		//   padding-right: 5%;
+		h2{
+			font-size: @biggerFont;
+		}
+		p{
+			  padding-right:5%;
+			  margin-right:10%;
+			  line-height: 1.75;
+		  }
+	  }
+	  .goodAt{
+		display:flex;
+		flex-direction: column;
+		padding-right: 20%;
+		
+		  h3{ 
+			  font-size: @biggerFont;
+			  margin-right:15%;
+			  padding-right:30%;
+			  white-space: nowrap;
+			  padding-left: 12%;
+			//   justify-content: flex-end;
+		  }
+		  ul{
+			//   padding-right: 30%;
+			  li{
+				  padding: 3% 2% 3% 2%;
+				  white-space: nowrap;
+				  width: 150%;
+				  border: 1px solid #bfbfbf;
+			  }
+		  }
+	  }
+	}
+	footer{
+		margin-top: 5%;
+		display: flex;
+		justify-content: center;
+		p{
+			font-size: .8rem;
+		}
+	}

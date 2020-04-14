@@ -9,6 +9,14 @@
   font-display: swap;
   src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5vAw.ttf) format('truetype');
 }
+@viewport {
+  zoom: 1;
+  width: extend-to-zoom;
+}
+@-ms-viewport {
+  width: extend-to-zoom;
+  zoom: 1;
+}
 html,
 body,
 div,
@@ -134,7 +142,6 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
-  border: 1px solid black;
 }
 html,
 body {
@@ -144,7 +151,11 @@ body {
 header {
   display: flex;
   flex-direction: column;
-  background-color: #e6e6ff;
+}
+@media (max-width: 500px) {
+  header {
+    width: 100%;
+  }
 }
 header img {
   width: 50%;
@@ -152,6 +163,7 @@ header img {
 header nav {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 2%;
 }
 header nav a {
   color: black;
@@ -159,20 +171,101 @@ header nav a {
   margin: 0% 0.5%;
   padding: 0 0.5%;
 }
-header h1 {
-  display: flex;
-  font-size: 2.2rem;
-  padding: 0% 2%;
+.mainHead {
+  background-color: #e6e6ff;
 }
-header p {
-  padding: 0 2%;
+.mainHead h1 {
+  display: flex;
+  font-size: 2.3rem;
+  padding: 0% 3%;
+}
+.mainHead p {
+  padding: 0 3%;
+}
+.fa {
+  padding: 1%;
+  font-size: 2rem;
+  width: 3.5%;
+  text-align: center;
+  text-decoration: none;
+  margin: 0% 8% 1% 8%;
+}
+@media (max-width: 500px) {
+  .fa {
+    width: 5%;
+  }
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
 }
 .workHistory {
   display: flex;
   flex-direction: column;
+  margin-top: 3%;
 }
-.companyList div {
+.workHistory h3 {
+  font-size: 1.8rem;
+  border-bottom: 1px dashed black;
+  padding-bottom: 2%;
+}
+.workHistory .companyList div {
   display: flex;
   flex-direction: row;
   padding: 0% 0% 0% 3%;
+}
+.compTi {
+  background-color: #e6e6ff;
+}
+.compTi p {
+  padding-right: 14%;
+}
+.amzPri p {
+  padding-right: 15%;
+}
+.offDep {
+  background-color: #e6e6ff;
+}
+.offDep p {
+  padding-right: 12.5%;
+}
+.firstSection {
+  display: flex;
+}
+.firstSection .aboutMe h2 {
+  font-size: 1.8rem;
+}
+.firstSection .aboutMe p {
+  padding-right: 5%;
+  margin-right: 10%;
+  line-height: 1.75;
+}
+.firstSection .goodAt {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20%;
+}
+.firstSection .goodAt h3 {
+  font-size: 1.8rem;
+  margin-right: 15%;
+  padding-right: 30%;
+  white-space: nowrap;
+  padding-left: 12%;
+}
+.firstSection .goodAt ul li {
+  padding: 3% 2% 3% 2%;
+  white-space: nowrap;
+  width: 150%;
+  border: 1px solid #bfbfbf;
+}
+footer {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+footer p {
+  font-size: 0.8rem;
 }

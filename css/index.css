@@ -1,1 +1,271 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5vAw.ttf) format('truetype');
+}
+@viewport {
+  zoom: 1;
+  width: extend-to-zoom;
+}
+@-ms-viewport {
+  width: extend-to-zoom;
+  zoom: 1;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  margin: 2% 7%;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+header {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 500px) {
+  header {
+    width: 100%;
+  }
+}
+header img {
+  width: 50%;
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2%;
+}
+header nav a {
+  color: black;
+  text-decoration: none;
+  margin: 0% 0.5%;
+  padding: 0 0.5%;
+}
+.mainHead {
+  background-color: #e6e6ff;
+}
+.mainHead h1 {
+  display: flex;
+  font-size: 2.3rem;
+  padding: 0% 3%;
+}
+.mainHead p {
+  padding: 0 3%;
+}
+.fa {
+  padding: 1%;
+  font-size: 2rem;
+  width: 3.5%;
+  text-align: center;
+  text-decoration: none;
+  margin: 0% 8% 1% 8%;
+}
+@media (max-width: 500px) {
+  .fa {
+    width: 5%;
+  }
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.workHistory {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+}
+.workHistory h3 {
+  font-size: 1.8rem;
+  border-bottom: 1px dashed black;
+  padding-bottom: 2%;
+}
+.workHistory .companyList div {
+  display: flex;
+  flex-direction: row;
+  padding: 0% 0% 0% 3%;
+}
+.compTi {
+  background-color: #e6e6ff;
+}
+.compTi p {
+  padding-right: 14%;
+}
+.amzPri p {
+  padding-right: 15%;
+}
+.offDep {
+  background-color: #e6e6ff;
+}
+.offDep p {
+  padding-right: 12.5%;
+}
+.firstSection {
+  display: flex;
+}
+.firstSection .aboutMe h2 {
+  font-size: 1.8rem;
+}
+.firstSection .aboutMe p {
+  padding-right: 5%;
+  margin-right: 10%;
+  line-height: 1.75;
+}
+.firstSection .goodAt {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20%;
+}
+.firstSection .goodAt h3 {
+  font-size: 1.8rem;
+  margin-right: 15%;
+  padding-right: 30%;
+  white-space: nowrap;
+  padding-left: 12%;
+}
+.firstSection .goodAt ul li {
+  padding: 3% 2% 3% 2%;
+  white-space: nowrap;
+  width: 150%;
+  border: 1px solid #bfbfbf;
+}
+footer {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+footer p {
+  font-size: 0.8rem;
+}
